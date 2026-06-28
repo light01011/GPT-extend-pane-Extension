@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Chat Width Expander",
+  "version": "1.0",
+  "description": "Expands ChatGPT, Claude, Gemini to full screen width",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
